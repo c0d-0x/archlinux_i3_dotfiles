@@ -1,0 +1,20 @@
+i3-dm 
+i3lock-color
+polybar-git
+xautoluck
+feh
+jakoolit's gtk and sddm themes
+blueman-applet
+mn-applet
+systemd
+Cascadia Nerd Font Mono
+xdg and xdg-utils
+xorg
+dunst
+picom
+xclip
+thuner
+brightnessctl
+pywal
+alacritty
+rofi
