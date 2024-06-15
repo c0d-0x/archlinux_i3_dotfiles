@@ -4,10 +4,12 @@ polybar-git
 xautoluck
 feh
 jakoolit's gtk and sddm themes
+bluez
 blueman-applet
 mn-applet
 systemd
 Cascadia Nerd Font Mono
+ComicShannsNerd Font
 xdg and xdg-utils
 xorg
 dunst
@@ -16,5 +18,6 @@ xclip
 thuner
 brightnessctl
 pywal
-alacritty
+kitty
 rofi
+viewnior
