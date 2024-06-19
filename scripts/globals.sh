@@ -1,9 +1,8 @@
-##
 # Author: c0d_0x
 # Description: yay-bin installer script
 #
-set -e 
-# colours 
+set -e
+# colours
 OK="$(tput setaf 2)[OK]$(tput sgr0)"
 ERROR="$(tput setaf 1)[ERROR]$(tput sgr0)"
 NOTE="$(tput setaf 3)[NOTE]$(tput sgr0)"
@@ -26,9 +25,9 @@ run_script() {
     echo $ERROR: "Script '$1' is not executable. Run 'chmod +x $1' to make it executable."
     return 1
   fi
-    
+
   # Run the script
-  source $1 # source the script inoder to read return values. 
+  source $1 # source the script inoder to read return values.
   sh "$1"
   # Capture the exit code of the script
   script_exit_code=$?
@@ -36,5 +35,3 @@ run_script() {
   # Return the exit code of the script (optional)
   return $script_exit_code
 }
-
-

@@ -7,20 +7,21 @@ local plugins = {
     "nvimtools/none-ls.nvim",
     -- ft = {'python'},
     opts = function()
-      return require "custom.configs.null-ls"
+      return require("custom.configs.null-ls")
     end,
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.configs.lspconfig"
+      require("plugins.configs.lspconfig")
+      require("custom.configs.lspconfig")
     end,
   },
   {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        "shfmt",
         "clangd",
         "stylua",
         "checkmake",

@@ -1,45 +1,46 @@
-local configs = require "plugins.configs.lspconfig"
+local configs = require("plugins.configs.lspconfig")
 local on_attach = configs.on_attach
 local capabilities = configs.capabilities
-local lspconfig = require "lspconfig"
-local prettier = require "prettier"
+local lspconfig = require("lspconfig")
+local prettier = require("prettier")
 
-lspconfig.rust_analyzer.setup {
-  command = {"rust-analyzer"},
-  filetypes = {"rust"},
-}
+lspconfig.rust_analyzer.setup({
+  command = { "rust-analyzer" },
+  filetypes = { "rust" },
+})
 
-lspconfig.bashls.setup {
+lspconfig.bashls.setup({
   command = { "bash-language-server", "start" },
+  provideFormatter = true,
   filetypes = { "sh" },
   setting = {
     bashIde = {
       globPattern = "*@(.sh|.inc|.bash|.command)",
     },
   },
-}
+})
 
-lspconfig.asm_lsp.setup {
+lspconfig.asm_lsp.setup({
   command = "asm-lsp",
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { "asm", "s", "S", "ASM" },
-}
+})
 
-lspconfig.cssls.setup {
+lspconfig.cssls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetype = { "css", "scss", "less" },
   provideFormatter = true,
-}
+})
 
-lspconfig.pyright.setup {
+lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetype = { "python" },
-}
+})
 
-lspconfig.clangd.setup {
+lspconfig.clangd.setup({
   on_attach = function(client, bufnr)
     client.server_capabilities.signatureHelpProvider = false
     on_attach(client, bufnr)
@@ -47,9 +48,9 @@ lspconfig.clangd.setup {
   capabilities = capabilities,
   filetype = { "c", "cpp" },
   provideFormatter = true,
-}
+})
 
-lspconfig.tsserver.setup {
+lspconfig.tsserver.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   filetype = {
@@ -65,9 +66,9 @@ lspconfig.tsserver.setup {
     html = true,
   },
   provideFormatter = true,
-}
+})
 
-lspconfig.html.setup {
+lspconfig.html.setup({
   on_attach = function()
     capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -78,5 +79,5 @@ lspconfig.html.setup {
     css = true,
     javascript = true,
   },
-}
-prettier.setup(require "custom.configs.prettierconfig")
+})
+prettier.setup(require("custom.configs.prettierconfig"))

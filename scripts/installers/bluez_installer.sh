@@ -5,21 +5,23 @@
 
 source ./global.sh
 bluepkgs=(
-bluez
-bluez-utils
-blueman 
+  bluez
+  bluez-utils
+  blueman
 )
 
- if yay ! command -v yay &> /dev/null; then
+if yay ! command -v yay &>/dev/null; then
 
-   printf "${NOTE} Installing Bluetooth Packages...\n"
-   
-   for pkg in ${bluepkgs[@]} ; do
-    sudo pacman -S --noconfirm $pkg   
-   done
+  printf "${NOTE} Installing Bluetooth Packages...\n"
+
+  for pkg in ${bluepkgs[@]}; do
+    sudo pacman -S --noconfirm $pkg
+  done
 else
-   echo $Error: "yay-bin is not installed"
-   exit -1
+  echo $ERROR: "yay-bin is not installed"
+  exit -1
 fi
 
-
+if $? -e 0; then
+  printf "${NOTE} bluez Installation complete\n"
+fi

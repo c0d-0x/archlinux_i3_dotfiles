@@ -9,16 +9,71 @@ i3wm=(
   i3lock-color
   rofi-git
   picom-git
-  )
+  aylurs-gtk-shell
+  greenclip
+  curl
+  gvfs
+  gvfs-mtp
+  imagemagick
+  inxi
+  jq
+  kitty
+  kvantum
+  network-manager-applet
+  pamixer
+  pavucontrol
+  pipewire-alsa
+  playerctl
+  polkit-gnome
+  python-requests
+  python-pyquery
+  qt5ct
+  qt6ct
+  qt6-svg
+  wget
+  dunst
+  xdg-user-dirs
+  xdg-utils
+)
 
-if  yay ! command -v yay &> /dev/null; then
-    for pkg in ${i3wm[@]} ; do
-    yay -S --noconfirm $pkg   
-  done     
+goodies=(
+  brightnessctl
+  btop
+  cava
+  eog
+  neofetch
+  gnome-system-monitor
+  mousepad
+  mpv
+  mpv-mpris
+  nvtop
+  nwg-look
+  pacman-contrib
+  vim
+  neovim
+  viewnior
+  yt-dlp
+)
+
+if yay ! command -v yay &>/dev/null; then
+
+  for pkg in ${i3wm[@]}; do
+    yay -S --noconfirm $pkg
+
+    if [[ $? -ne 0 ]]; then
+      printf "${ERROR}: ${pkg} Was Not Installed\n"
+    fi
+  done
+
+  for pkg in ${goodies[@]}; do
+    yay -S --noconfirm $pkg
+
+    if [[ $? -ne 0 ]]; then
+      printf "${ERROR}: ${pkg} Was Not Installed\n"
+    fi
+  done
+
 else
-   echo $Error: "yay-bin is not installed"
-   exit -1
-
+  echo $Error: "yay-bin is not installed [Install it Manually]"
+  exit -1
 fi
-
-

@@ -8,19 +8,19 @@
 source ./globals.sh
 
 install_yay() {
-  echo ${CAT} - "Installing yay-bin..."
+  echo "${NOTE}: Installing yay-bin..."
   sudo  pacman -S --needed git base-devel
   git clone https://aur.archlinux.org/yay-bin.git
   cd yay-bin
   makepkg -si
-  echo ${OK} - "Installation Done!!"
+  echo "${OK}: Installation Done!!"
   cd ..
   return 0
 }
 
 if yay ! command -v yay &> /dev/null ; then
-  echo ${OK} - "yay-bin has already been installed"
-  return 1
+  printf "${OK}: yay-bin has already been installed"
+  return -1
 fi
 
 if [ -d yay-bin ]; then
