@@ -3,7 +3,7 @@
 # Description: bluez installer script
 #
 
-source ./global.sh
+source ./globals.sh
 bluepkgs=(
   bluez
   bluez-utils
