@@ -8,6 +8,11 @@
 source ./globals.sh
 
 install_yay() {
+if yay ! command -v yay &> /dev/null ; then
+  printf "${OK}: yay-bin has already been installed\n"
+  continue 
+fi
+
   echo "${NOTE}: Installing yay-bin..."
   sudo  pacman -S --needed git base-devel
   git clone https://aur.archlinux.org/yay-bin.git
@@ -17,15 +22,12 @@ install_yay() {
   cd ..
 }
 
-if yay ! command -v yay &> /dev/null ; then
-  printf "${OK}: yay-bin has already been installed\n"
-fi
 
 if [ -d yay-bin ]; then
-    echo ${WARNING} - "Yay-bin Installation dir found.."
-    echo ${CAT} - "Cleaning up..."
-    rm -rf yay-bin 
-    echo ${OK} - "Done"
+    echo ${WARNING}: "Yay-bin Installation dir found.."
+    echo ${CAT}: "Cleaning up..."
+    rm -rvf yay-bin 
+    echo ${OK}: "Done"
 fi
 
 install_yay

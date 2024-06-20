@@ -7,8 +7,8 @@
 
 source ./globals.sh
 thunerpkgs=(
-  thunar-git
-  thunar-volman-git
+  thunar
+  thunar-volman
   tumbler
   ffmpegthumbnailer
   file-roller

@@ -7,6 +7,7 @@ source ./globals.sh
 i3wm=(
   i3-git
   i3lock-color
+  systemd
   rofi-git
   polybar-git
   picom-git
@@ -42,6 +43,8 @@ goodies=(
   btop
   cava
   eog
+  firefox
+  chromium
   neofetch
   gnome-system-monitor
   mousepad
@@ -52,7 +55,6 @@ goodies=(
   greenclip
   xautoluck
   feh
-  systemd
   dunst
   xclip
   thuner
@@ -69,6 +71,12 @@ goodies=(
 if yay ! command -v yay &>/dev/null; then
   clear
   for pkg in ${i3wm[@]}; do
+
+    if $pkg ! command -v $pkg &>/dev/null; then
+      printf "${NOTE}: $pkg has already been Installed..\n"
+      continue
+    fi
+
     yay -S --noconfirm $pkg
 
     if [[ $? -ne 0 ]]; then
@@ -77,6 +85,12 @@ if yay ! command -v yay &>/dev/null; then
   done
 
   for pkg in ${goodies[@]}; do
+
+    if $pkg ! command -v $pkg &>/dev/null; then
+      printf "${NOTE}: $pkg has already been Installed..\n"
+      continue
+    fi
+
     yay -S --noconfirm $pkg
 
     if [[ $? -ne 0 ]]; then

@@ -22,6 +22,13 @@ if yay ! command -v yay &>/dev/null; then
   printf "${NOTE} Installing necessary fonts \n"
 
 for pkg in ${thunerpkgs[@]}; do
+
+  if $pkg ! command -v $pkg &>/dev/null; then
+    printf "${NOTE}: $pkg has already been Installed..\n"
+    continue
+  fi
+
+
   yay -S $pkg --noconfirm
   if [[ $? -ne 0  ]]; then
     printf "${ERROR}: ${pkg} Was Not Installed\n"
