@@ -28,7 +28,7 @@ fi
 cp -rv ../config/* ~/.config/
 
 printf "${ACTION}: Activating configs...\n"
-chmod $(whoami) -R ~/.config/
+chown $(whoami) -R ~/.config/
 
 printf "${NOTE}: Done Installing dotfiles...\n"
 
