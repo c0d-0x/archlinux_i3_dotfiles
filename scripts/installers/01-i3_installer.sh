@@ -5,7 +5,7 @@
 
 source ./globals.sh
 i3wm=(
-  i3
+  i3-wm
   i3lock-color
   systemd
   rofi
