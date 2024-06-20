@@ -67,7 +67,7 @@ goodies=(
 )
 
 if yay ! command -v yay &>/dev/null; then
-
+  clear
   for pkg in ${i3wm[@]}; do
     yay -S --noconfirm $pkg
 

@@ -12,8 +12,8 @@ source $GOBALS_VaF
 
 for script in $(ls $INTALLERS/); do
   # echo "$script"
-  # run_script $INTALLERS/$script
-  echo $INTALLERS/$script
+  run_script $INTALLERS/$script
+  # echo $INTALLERS/$script
 
   if [[ $? -ne 0 ]]; then
     echo $ERROR: "${script}: Failed!!"
@@ -25,7 +25,7 @@ printf "${NOTE}: Installing dotfiles...\n"
 if [ ! -d ~/.config ]; then
   mkdir ~./config
 fi
-cp -rv ../config/
+cp -rv ../config/* ~/.config/
 
 if [ ! -d "/usr/share/sddm/themes" ]; then
   sudo mkdir -p /usr/share/sddm/themes

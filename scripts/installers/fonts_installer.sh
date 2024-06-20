@@ -16,6 +16,7 @@ fonts=(
 )
 
 if yay ! command -v yay &>/dev/null; then
+  clear
 
   printf "${NOTE} Installing necessary fonts \n"
 
@@ -27,6 +28,7 @@ for pkg in ${thunerpkgs[@]}; do
 done
 
 else
+  clear
   printf "${ERROR}: yay-bin is not Installed - [install it manually]\n"
 fi
 
