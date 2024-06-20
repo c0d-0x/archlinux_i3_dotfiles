@@ -76,7 +76,7 @@ if command -v yay &>/dev/null; then
       continue
     fi
 
-    sudo pacman -S --noconfirm $pkg
+    yay -S --noconfirm $pkg
 
     if [[ $? -ne 0 ]]; then
       printf "${ERROR}: ${pkg} Was Not Installed\n"
