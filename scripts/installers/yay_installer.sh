@@ -19,7 +19,7 @@ install_yay() {
 }
 
 if yay ! command -v yay &> /dev/null ; then
-  printf "${OK}: yay-bin has already been installed"
+  printf "${OK}: yay-bin has already been installed\n"
   return -1
 fi
 

@@ -8,9 +8,10 @@ i3wm=(
   i3-git
   i3lock-color
   rofi-git
+  polybar-git
   picom-git
   aylurs-gtk-shell
-  greenclip
+  systemd
   curl
   gvfs
   gvfs-mtp
@@ -48,6 +49,16 @@ goodies=(
   mpv-mpris
   nvtop
   nwg-look
+  greenclip
+  xautoluck
+  feh
+  systemd
+  dunst
+  xclip
+  thuner
+  brightnessctl
+  pywal
+  viewnior
   pacman-contrib
   vim
   neovim
