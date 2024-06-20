@@ -16,14 +16,14 @@ fonts=(
  ttf-jetbrains-mono-nerd 
 )
 
-if yay ! command -v yay &>/dev/null; then
+if command -v yay &>/dev/null; then
   clear
 
   printf "${NOTE} Installing necessary fonts \n"
 
 for pkg in ${thunerpkgs[@]}; do
 
-  if $pkg ! command -v $pkg &>/dev/null; then
+  if command -v $pkg &>/dev/null; then
     printf "${NOTE}: $pkg has already been Installed..\n"
     continue
   fi

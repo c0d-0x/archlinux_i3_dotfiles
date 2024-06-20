@@ -8,9 +8,9 @@
 source ./globals.sh
 
 install_yay() {
-if yay ! command -v yay &> /dev/null ; then
+if command -v yay &> /dev/null ; then
   printf "${OK}: yay-bin has already been installed\n"
-  continue 
+  return 0 
 fi
 
   echo "${NOTE}: Installing yay-bin..."
@@ -25,7 +25,7 @@ fi
 
 if [ -d yay-bin ]; then
     echo ${WARNING}: "Yay-bin Installation dir found.."
-    echo ${CAT}: "Cleaning up..."
+    echo ${ACTION}: "Cleaning up..."
     rm -rvf yay-bin 
     echo ${OK}: "Done"
 fi

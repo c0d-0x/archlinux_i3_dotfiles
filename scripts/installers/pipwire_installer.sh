@@ -13,12 +13,12 @@ pipewirepkgs=(
     pipewire-alsa
     pipewire-pulse
 )
-if yay ! command -v yay &>/dev/null; then
+if command -v yay &>/dev/null; then
 
   printf "${NOTE} Installing pipewire Packages...\n"
 
 for pkg in ${pipewirepkgs[@]}; do
-  if $pkg ! command -v $pkg &>/dev/null; then
+  if command -v $pkg &>/dev/null; then
     printf "${NOTE}: $pkg has already been Installed..\n"
     continue
   fi

@@ -10,7 +10,7 @@ bluepkgs=(
   blueman
 )
 
-if yay ! command -v yay &>/dev/null; then
+if command -v yay &>/dev/null; then
 
   printf "${NOTE} Installing Bluetooth Packages...\n"
 

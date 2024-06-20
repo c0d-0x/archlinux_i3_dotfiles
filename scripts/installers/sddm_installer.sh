@@ -13,7 +13,7 @@ sddmpkgs=(
   sddm
 )
 
-if yay ! command -v yay &>/dev/null; then
+if command -v yay &>/dev/null; then
 
   printf "${NOTE} Installing sddm Packages...\n"
 

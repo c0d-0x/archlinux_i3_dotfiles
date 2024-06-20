@@ -16,7 +16,7 @@ thunerpkgs=(
   thunar-archive-plugin
 )
 
-if yay ! command -v yay &>/dev/null; then
+if command -v yay &>/dev/null; then
 
   printf "${NOTE} Installing Thunar Packages...\n"
 

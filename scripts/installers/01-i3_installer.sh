@@ -68,11 +68,11 @@ goodies=(
   yt-dlp
 )
 
-if yay ! command -v yay &>/dev/null; then
+if command -v yay &>/dev/null; then
   clear
   for pkg in ${i3wm[@]}; do
 
-    if $pkg ! command -v $pkg &>/dev/null; then
+    if command -v $pkg &>/dev/null; then
       printf "${NOTE}: $pkg has already been Installed..\n"
       continue
     fi
@@ -86,7 +86,7 @@ if yay ! command -v yay &>/dev/null; then
 
   for pkg in ${goodies[@]}; do
 
-    if $pkg ! command -v $pkg &>/dev/null; then
+    if command -v $pkg &>/dev/null; then
       printf "${NOTE}: $pkg has already been Installed..\n"
       continue
     fi
