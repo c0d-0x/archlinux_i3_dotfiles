@@ -10,9 +10,9 @@ INTALLERS=./installers
 GOBALS_VaF=./globals.sh
 source $GOBALS_VaF
 
-for script in $(ls $INTALLERS/); do
+for script in $(ls $INTALLERS/*.sh); do
   # echo "$script"
-  run_script $INTALLERS/$script
+  run_script $script
   # echo $INTALLERS/$script
 
   if [[ $? -ne 0 ]]; then
@@ -52,5 +52,4 @@ fi
 
 sudo cp ../touchpad-tap.conf /etc/X11/xorg.conf.d/touchpad-tap.conf
 
-clear
 printf "\n${NOTE}: Installation complete, plz restart your PC!!\n"
