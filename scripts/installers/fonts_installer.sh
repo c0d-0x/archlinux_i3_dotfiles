@@ -14,6 +14,8 @@ fonts=(
  ttf-fira-code
  ttf-jetbrains-mono 
  ttf-jetbrains-mono-nerd 
+ otf-cascadia-code
+ otf-comicshanns-nerd
 )
 
 if command -v yay &>/dev/null; then

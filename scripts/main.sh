@@ -27,6 +27,13 @@ if [ ! -d ~/.config ]; then
 fi
 cp -rv ../config/* ~/.config/
 
+printf "${ACTION}: Activating configs...\n"
+chmod $(whoami) -R ~/.config/
+
+printf "${NOTE}: Done Installing dotfiles...\n"
+
+printf "${NOTE}: Setting up sddm theme\n"
+
 ##
 # Setting up sddm configs
 #
