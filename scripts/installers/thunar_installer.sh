@@ -21,7 +21,7 @@ if command -v yay &>/dev/null; then
   printf "${NOTE} Installing Thunar Packages...\n"
 
 for pkg in ${thunerpkgs[@]}; do
-  yay -S $pkg --noconfirm
+  sudo pacman -S $pkg --noconfirm
   if [[ $? -ne 0  ]]; then
     printf "${ERROR}: ${pkg} Was Not Installed\n"
   fi

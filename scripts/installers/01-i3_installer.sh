@@ -5,14 +5,13 @@
 
 source ./globals.sh
 i3wm=(
-  i3-git
+  i3
   i3lock-color
   systemd
-  rofi-git
-  polybar-git
-  picom-git
+  rofi
+  polybar
+  picom
   aylurs-gtk-shell
-  systemd
   curl
   gvfs
   gvfs-mtp
@@ -77,7 +76,7 @@ if command -v yay &>/dev/null; then
       continue
     fi
 
-    yay -S --noconfirm $pkg
+    sudo pacman -S --noconfirm $pkg
 
     if [[ $? -ne 0 ]]; then
       printf "${ERROR}: ${pkg} Was Not Installed\n"
@@ -91,7 +90,7 @@ if command -v yay &>/dev/null; then
       continue
     fi
 
-    yay -S --noconfirm $pkg
+    sudo pacman -S --noconfirm $pkg
 
     if [[ $? -ne 0 ]]; then
       printf "${ERROR}: ${pkg} Was Not Installed\n"
