@@ -15,12 +15,10 @@ install_yay() {
   makepkg -si
   echo "${OK}: Installation Done!!"
   cd ..
-  return 0
 }
 
 if yay ! command -v yay &> /dev/null ; then
   printf "${OK}: yay-bin has already been installed\n"
-  return -1
 fi
 
 if [ -d yay-bin ]; then
