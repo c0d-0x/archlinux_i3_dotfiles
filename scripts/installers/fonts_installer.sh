@@ -5,6 +5,7 @@
 # Description: fonts installer script
 #
 
+source ./globals.sh
 fonts=(
  adobe-source-code-pro-fonts 
  noto-fonts-emoji

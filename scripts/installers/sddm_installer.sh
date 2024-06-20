@@ -5,6 +5,7 @@
 # Description: sddm installer script
 #
 
+source ./globals.sh
 sddmpkgs=(
   qt6-5compat 
   qt6-declarative 

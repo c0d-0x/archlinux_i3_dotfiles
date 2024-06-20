@@ -5,6 +5,7 @@
 # Description: thunar installer script
 #
 
+source ./globals.sh
 thunerpkgs=(
   thunar-git
   thunar-volman-git

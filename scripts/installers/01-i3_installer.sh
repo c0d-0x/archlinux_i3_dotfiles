@@ -3,7 +3,7 @@
 # Description: i3 installer script
 #
 
-source ./global.sh
+source ./globals.sh
 i3wm=(
   i3-git
   i3lock-color

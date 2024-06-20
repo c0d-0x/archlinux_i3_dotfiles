@@ -5,6 +5,7 @@
 # Description: pipewire installer script
 #
 
+source ./globals.sh
 pipewirepkgs=(
     pipewire
     wireplumber
