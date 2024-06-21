@@ -8,28 +8,44 @@
 source ./globals.sh
 
 gtkpkgs=(
-    unzip
-    gtk-engine-murrine
-  )
+  unzip
+  gtk-engine-murrine
+)
 
 if command -v yay &>/dev/null; then
   clear
 
   printf "${NOTE} Installing necessary gtk parkages...\n"
 
-for pkg in ${gtkpkgs[@]}; do
+  for pkg in ${gtkpkgs[@]}; do
 
-  if command -v $pkg &>/dev/null; then
-    printf "${NOTE}: $pkg has already been Installed...\n"
-    continue
+    if command -v $pkg &>/dev/null; then
+      printf "${NOTE}: $pkg has already been Installed...\n"
+      continue
+    fi
+
+
+    yay -S $pkg --noconfirm
+    if [[ $? -ne 0  ]]; then
+      printf "${ERROR}: ${pkg} Was Not Installed\n"
+    fi
+  done
+
+  printf "$NOTE: Cloning GTK themes and Icons repository...\n"
+  if git clone https://github.com/JaKooLit/GTK-themes-icons.git ; then
+    cd GTK-themes-icons
+    chmod +x auto-extract.sh
+    ./auto-extract.sh
+    cd ..
+    printf "$OK: Extracted GTK Themes & Icons to ~/.icons & ~/.themes folders...\n"
+  else
+    printf "$ERROR: Download failed for GTK themes and Icons...\n"
   fi
 
+  tar -xf "assets/Bibata-Modern-Ice.tar.xz" -C ~/.icons
+  echo "$OK Extracted Bibata-Modern-Ice.tar.xz to ~/.icons folder."
 
-  yay -S $pkg --noconfirm
-  if [[ $? -ne 0  ]]; then
-    printf "${ERROR}: ${pkg} Was Not Installed\n"
-  fi
-done
+  clear
 
 else
   clear
