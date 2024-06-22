@@ -44,12 +44,12 @@ fi
 sudo tar -xvf ../sddm_theme/simplesddm.tar --directory=/usr/share/sddm/themes/
 
 printf "${NOTE}: Setting up sddm themes...\n"
-if [ ! -d "/etc/sddm.conf.d" ]; then
-  sudo mkdir -p /etc/sddm.conf.d
-  printf "\n${WARNING}: Directory '/etc/sddm.conf.d' created...\n"
-fi
+# if [ ! -d "/etc/sddm.conf.d" ]; then
+#   sudo mkdir -p /etc/sddm.conf.d
+#   printf "\n${WARNING}: Directory '/etc/sddm.conf.d' created...\n"
+# fi
 
-sudo cp ../sddm.conf /etc/sddm.conf.d/
+sudo cp ../sddm.conf /etc/
 
 printf "${NOTE}: Setting up tab to click [Xorg mouse config]...\n"
 if [ ! -d "/etc/X11/xorg.conf.d" ]; then
@@ -58,5 +58,9 @@ if [ ! -d "/etc/X11/xorg.conf.d" ]; then
 fi
 
 sudo cp ../touchpad-tap.conf /etc/X11/xorg.conf.d/touchpad-tap.conf
+
+printf "\n${NOTE}: Setting up user locale folder!!\n"
+mkdir -p ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
+xdg-user-dirs-update
 
 printf "\n${NOTE}: Installation complete, plz restart your PC!!\n"
