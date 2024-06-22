@@ -52,7 +52,7 @@ fi
 sudo cp ../sddm.conf /etc/sddm.conf.d/
 
 printf "${NOTE}: Setting up tab to click [Xorg mouse config]...\n"
-if [ -d "/etc/X11/xorg.conf.d" ]; then
+if [ ! -d "/etc/X11/xorg.conf.d" ]; then
   sudo mkdir -p /etc/X11/xorg.conf.d/
   printf "\n${WARNING}: Directory '/etc/X11/xorg.conf.d/' created...\n"
 fi
