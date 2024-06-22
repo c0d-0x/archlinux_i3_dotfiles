@@ -23,7 +23,7 @@ done
 printf "${NOTE}: Installing dotfiles...\n"
 
 if [ ! -d ~/.config ]; then
-  mkdir ~./config
+  mkdir -p ~./config
 fi
 cp -rv ../config/* ~/.config/
 
@@ -45,7 +45,7 @@ sudo tar -xvf ../sddm_theme/simplesddm.tar --directory=/usr/share/sddm/themes/
 
 printf "${NOTE}: Setting up sddm themes...\n"
 if [ ! -d "/etc/sddm.conf.d" ]; then
-  sudo mkdir /etc/sddm.conf.d
+  sudo mkdir -p /etc/sddm.conf.d
   printf "\n${WARNING}: Directory '/etc/sddm.conf.d' created...\n"
 fi
 
