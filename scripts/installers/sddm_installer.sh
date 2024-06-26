@@ -23,7 +23,7 @@ if command -v yay &>/dev/null; then
       printf "${ERROR}: ${pkg} Was Not Installed\n"
     fi
   done
-  printf "${NOTE}: Activating sddm"
+  printf "${NOTE}: Activating sddm...\n"
   sudo systemctl enable sddm
 
 ##
@@ -45,7 +45,7 @@ if git clone https://github.com/JaKooLit/simple-sddm-2.git ; then
 clear 
   echo "[theme]" > ./theme.conf.user
   echo "Current=simple-sddm-2" >> theme.conf.user
-  sudo mv ./theme.conf.user /etc/sddm.conf.d/theme.conf.user
+  sudo mv ./theme.conf.user /etc/sddm.conf.d/
 
 fi
 else
