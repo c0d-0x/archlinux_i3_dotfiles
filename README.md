@@ -6,4 +6,4 @@ This is a collection of my I3-wm dotfiles with installation scripts.
 
 Credits
 
-- All thanks to [JaKooLit](https://github.com/JaKooLit) for the inspiration and hosting such amzing scripts i could reference to.
+- All thanks to [JaKooLit](https://github.com/JaKooLit) for the inspiration and hosting such amazing scripts I could reference to.
