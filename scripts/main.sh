@@ -34,23 +34,6 @@ printf "${NOTE}: Done Installing dotfiles...\n"
 
 printf "${NOTE}: Setting up sddm theme\n"
 
-##
-# Setting up sddm configs
-#
-if [ ! -d "/usr/share/sddm/themes" ]; then
-  sudo mkdir -p /usr/share/sddm/themes
-  printf "\n${WARNING}: Directory '/usr/share/sddm/themes' created...\n"
-fi
-sudo tar -xvf ../sddm_theme/simplesddm.tar --directory=/usr/share/sddm/themes/
-
-printf "${NOTE}: Setting up sddm themes...\n"
-if [ ! -d "/etc/sddm.conf.d" ]; then
-  sudo mkdir -p /etc/sddm.conf.d
-  printf "\n${WARNING}: Directory '/etc/sddm.conf.d' created...\n"
-fi
-
-sudo cp ../sddm.conf /etc/sddm.conf.d/theme.conf.user
-
 printf "${NOTE}: Setting up tab to click [Xorg mouse config]...\n"
 if [ ! -d "/etc/X11/xorg.conf.d" ]; then
   sudo mkdir -p /etc/X11/xorg.conf.d/

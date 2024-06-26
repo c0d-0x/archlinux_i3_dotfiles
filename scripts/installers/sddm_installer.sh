@@ -17,14 +17,36 @@ if command -v yay &>/dev/null; then
 
   printf "${NOTE} Installing sddm Packages...\n"
 
-for pkg in ${sddmpkgs[@]}; do
-  yay -S $pkg --noconfirm
-  if [[ $? -ne 0  ]]; then
-    printf "${ERROR}: ${pkg} Was Not Installed\n"
+  for pkg in ${sddmpkgs[@]}; do
+    yay -S $pkg --noconfirm
+    if [[ $? -ne 0  ]]; then
+      printf "${ERROR}: ${pkg} Was Not Installed\n"
+    fi
+  done
+  printf "${NOTE}: Activating sddm"
+  sudo systemctl enable sddm
+
+##
+# Setting up sddm configs
+#
+if git clone https://github.com/JaKooLit/simple-sddm-2.git ; then
+
+  if [ ! -d "/usr/share/sddm/themes" ]; then
+    sudo mkdir -p /usr/share/sddm/themes
+    printf "\n${WARNING}: Directory '/usr/share/sddm/themes' created...\n"
   fi
-done
-printf "${NOTE}: Activating sddm"
-sudo systemctl enable sddm
+  sudo mv simple-sddm-2 /usr/share/sddm/themes/
+
+  printf "${NOTE}: Setting up sddm themes...\n"
+  if [ ! -d "/etc/sddm.conf.d" ]; then
+    sudo mkdir -p /etc/sddm.conf.d
+    printf "\n${WARNING}: Directory '/etc/sddm.conf.d' created...\n"
+  fi
+
+  sudo echo "[theme]" > /etc/sddm.conf.d/theme.conf.user
+  sudo echo "Current=simple-sddm-2" >> /etc/sddm.conf.d/theme.conf.user
+
+fi
 else
   printf "${ERROR}: yay-bin is not Installed - [install it manually]\n"
 fi
