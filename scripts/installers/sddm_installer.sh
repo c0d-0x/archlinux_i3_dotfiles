@@ -42,9 +42,10 @@ if git clone https://github.com/JaKooLit/simple-sddm-2.git ; then
     sudo mkdir -p /etc/sddm.conf.d
     printf "\n${WARNING}: Directory '/etc/sddm.conf.d' created...\n"
   fi
-
-  sudo echo "[theme]" > /etc/sddm.conf.d/theme.conf.user
-  sudo echo "Current=simple-sddm-2" >> /etc/sddm.conf.d/theme.conf.user
+clear 
+  echo "[theme]" > ./theme.conf.user
+  echo "Current=simple-sddm-2" >> theme.conf.user
+  sudo mv ./theme.conf.user /etc/sddm.conf.d/theme.conf.user
 
 fi
 else
