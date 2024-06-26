@@ -13,7 +13,7 @@ fonts=(
  ttf-droid 
  ttf-fira-code
  ttf-jetbrains-mono 
- ttf-font-awesom-4
+ ttf-font-awesome-4
  ttf-jetbrains-mono-nerd 
  otf-cascadia-code
  otf-comicshanns-nerd
@@ -24,19 +24,19 @@ if command -v yay &>/dev/null; then
 
   printf "${NOTE} Installing necessary fonts \n"
 
-for pkg in ${thunerpkgs[@]}; do
+  for pkg in ${thunerpkgs[@]}; do
 
-  if command -v $pkg &>/dev/null; then
-    printf "${NOTE}: $pkg has already been Installed..\n"
-    continue
-  fi
+    if command -v $pkg &>/dev/null; then
+      printf "${NOTE}: $pkg has already been Installed..\n"
+      continue
+    fi
 
 
-  yay -S $pkg --noconfirm
-  if [[ $? -ne 0  ]]; then
-    printf "${ERROR}: ${pkg} Was Not Installed\n"
-  fi
-done
+    yay -S $pkg --noconfirm
+    if [[ $? -ne 0  ]]; then
+      printf "${ERROR}: ${pkg} Was Not Installed\n"
+    fi
+  done
 
 else
   clear
