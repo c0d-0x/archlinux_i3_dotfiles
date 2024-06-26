@@ -13,6 +13,7 @@ fonts=(
  ttf-droid 
  ttf-fira-code
  ttf-jetbrains-mono 
+ ttf-font-awesom-4
  ttf-jetbrains-mono-nerd 
  otf-cascadia-code
  otf-comicshanns-nerd

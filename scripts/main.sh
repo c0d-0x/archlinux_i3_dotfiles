@@ -32,7 +32,7 @@ chown $(whoami) -R ~/.config/
 
 printf "${NOTE}: Done Installing dotfiles...\n"
 
-printf "${NOTE}: Setting up sddm theme\n"
+printf "${NOTE}: Setting up sddm theme...\n"
 
 printf "${NOTE}: Setting up tab to click [Xorg mouse config]...\n"
 if [ ! -d "/etc/X11/xorg.conf.d" ]; then
@@ -45,7 +45,8 @@ printf "\n${NOTE}: Setting up user locale folder!!\n"
 mkdir -p ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
 xdg-user-dirs-update
 
-printf "\n${NOTE}: Cloning Wallpapers!!\n"
-git clone https://github.com/c0d-0x/Wallpapers.git ~/Pictures/
+printf "\n${NOTE}: Setting up  Wallpaper dir and fonts!!\n"
+mv ../config/wallpapers ~/Pictures/
+mv ../fonts/ ~/.fonts/
 
 printf "\n${NOTE}: Installation complete, plz restart your PC!!\n"
