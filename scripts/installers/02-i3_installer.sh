@@ -59,6 +59,7 @@ goodies=(
   thuner
   brightnessctl
   python-pywal
+  python-pywalfox
   viewnior
   pacman-contrib
   vim
