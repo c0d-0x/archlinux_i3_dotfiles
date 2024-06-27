@@ -35,6 +35,12 @@ if git clone https://github.com/JaKooLit/simple-sddm-2.git ; then
     sudo mkdir -p /usr/share/sddm/themes
     printf "\n${WARNING}: Directory '/usr/share/sddm/themes' created...\n"
   fi
+
+  if [ -d "/usr/share/sddm/themes/simple-sddm-2" ]; then
+    sudo rm -rfv /usr/share/sddm/themes/simple-sddm-2
+    printf "\n${WARNING}: An sddm theme instance found...cleaned up!!!\n"
+  fi
+
   sudo mv simple-sddm-2 /usr/share/sddm/themes/
 
   printf "${NOTE}: Setting up sddm themes...\n"
