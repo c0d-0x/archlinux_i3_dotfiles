@@ -48,5 +48,6 @@ xdg-user-dirs-update
 printf "\n${NOTE}: Setting up  Wallpaper dir and fonts!!\n"
 mv ../config/wallpapers ~/Pictures/
 mv ../fonts/ ~/.fonts/
+chown $(whoami) -R ~/.fonts/
 
 printf "\n${NOTE}: Installation complete, plz restart your PC!!\n"

@@ -58,7 +58,7 @@ goodies=(
   xclip
   thuner
   brightnessctl
-  pywal
+  python-pywal
   viewnior
   pacman-contrib
   vim
