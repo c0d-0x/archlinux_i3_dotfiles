@@ -10,7 +10,7 @@ INTALLERS=./installers
 GOBALS_VaF=./globals.sh
 source $GOBALS_VaF
 
-for script in $(find $INTALLERS/ -name "*.sh"); do
+for script in $(find $INTALLERS/ -name "*.sh" | sort); do
   # echo "$script"
   run_script $script
   # echo $INTALLERS/$script
