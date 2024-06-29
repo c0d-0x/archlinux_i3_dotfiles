@@ -9,6 +9,8 @@ source ./globals.sh
 
 gtkpkgs=(
   unzip
+  gtk3
+  gtk4
   gtk-engine-murrine
 )
 

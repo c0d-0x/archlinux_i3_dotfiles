@@ -13,6 +13,7 @@ thunerpkgs=(
   ffmpegthumbnailer
   file-roller
   xarchiver
+  xautoluck
   thunar-archive-plugin
 )
 

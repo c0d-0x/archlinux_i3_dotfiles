@@ -23,9 +23,9 @@ i3wm=(
   network-manager-applet
   pamixer
   pavucontrol
+  polkit-kde-agent
   pipewire-alsa
   playerctl
-  polkit-gnome
   python-requests
   python-pyquery
   qt5ct
@@ -39,6 +39,7 @@ i3wm=(
 
 goodies=(
   brightnessctl
+  batsignal
   btop
   cava
   eog
@@ -52,7 +53,6 @@ goodies=(
   nvtop
   nwg-look
   greenclip
-  xautoluck
   feh
   dunst
   xclip

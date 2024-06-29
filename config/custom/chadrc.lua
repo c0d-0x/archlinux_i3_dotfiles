@@ -2,7 +2,7 @@
 local M = {}
 
 M.ui = {
-  theme = "gatekeeper",
+  theme = "yoru",
   hl_add = {},
   hl_override = {},
   -- changed_themes = {},

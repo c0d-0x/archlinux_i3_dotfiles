@@ -9,13 +9,12 @@ source ./globals.sh
 fonts=(
  adobe-source-code-pro-fonts 
  noto-fonts-emoji
- otf-font-awesome 
  ttf-droid 
  ttf-fira-code
  ttf-jetbrains-mono 
  ttf-font-awesome-4
  ttf-jetbrains-mono-nerd 
- otf-cascadia-code
+ ttf-cascadia-mono-nerd
  otf-comicshanns-nerd
 )
 

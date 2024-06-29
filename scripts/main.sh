@@ -10,7 +10,7 @@ INTALLERS=./installers
 GOBALS_VaF=./globals.sh
 source $GOBALS_VaF
 
-for script in $(ls $INTALLERS/*.sh); do
+for script in $(find $INTALLERS/ -name "*.sh"); do
   # echo "$script"
   run_script $script
   # echo $INTALLERS/$script
@@ -44,10 +44,5 @@ sudo cp ../touchpad-tap.conf /etc/X11/xorg.conf.d/touchpad-tap.conf
 printf "\n${NOTE}: Setting up user locale folder!!\n"
 mkdir -p ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
 xdg-user-dirs-update
-
-printf "\n${NOTE}: Setting up  Wallpaper dir and fonts!!\n"
-mv ../config/wallpapers ~/Pictures/
-mv ../fonts/ ~/.fonts/
-chown $(whoami) -R ~/.fonts/
 
 printf "\n${NOTE}: Installation complete, plz restart your PC!!\n"
