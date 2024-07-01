@@ -8,6 +8,8 @@
 source ./globals.sh
 sddmpkgs=(
   qt6-5compat 
+  qt5-base
+  qt6-base
   qt6-declarative 
   qt6-svg
   sddm
@@ -49,9 +51,9 @@ if git clone https://github.com/JaKooLit/simple-sddm-2.git ; then
     printf "\n${WARNING}: Directory '/etc/sddm.conf.d' created...\n"
   fi
 clear 
-echo "[theme]" > ./theme.conf
-  echo "Current=simple-sddm-2" >> theme.conf
-  sudo mv ./theme.conf /etc/sddm.conf.d/
+echo "[theme]" > ./sddm.conf
+  echo "Current=simple-sddm-2" >> sddm.conf
+  sudo mv ./sddm.conf /etc/sddm.conf.d/
 
 fi
 else
