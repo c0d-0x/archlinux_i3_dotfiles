@@ -32,8 +32,6 @@ chown $(whoami) -R ~/.config/
 
 printf "${NOTE}: Done Installing dotfiles...\n"
 
-printf "${NOTE}: Setting up sddm theme...\n"
-
 printf "${NOTE}: Setting up tab to click [Xorg mouse config]...\n"
 if [ ! -d "/etc/X11/xorg.conf.d" ]; then
   sudo mkdir -p /etc/X11/xorg.conf.d/

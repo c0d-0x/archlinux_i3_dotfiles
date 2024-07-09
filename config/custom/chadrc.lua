@@ -2,11 +2,11 @@
 local M = {}
 
 M.ui = {
-  theme = "yoru",
+  theme = "gatekeeper",
   hl_add = {},
   hl_override = {},
   -- changed_themes = {},
-  theme_toggle = { "gatekeeper", "yoru" },
+  theme_toggle = { "tokyonight", "gatekeeper" },
   transparency = true,
   lsp_semantic_tokens = true,
   nvdash = {

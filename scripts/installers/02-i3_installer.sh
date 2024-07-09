@@ -56,7 +56,6 @@ goodies=(
   feh
   dunst
   xclip
-  thuner
   brightnessctl
   python-pywal
   python-pywalfox
