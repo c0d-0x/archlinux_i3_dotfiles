@@ -24,7 +24,6 @@ i3wm=(
   pamixer
   pavucontrol
   polkit-kde-agent
-  pipewire-alsa
   playerctl
   python-requests
   python-pyquery
