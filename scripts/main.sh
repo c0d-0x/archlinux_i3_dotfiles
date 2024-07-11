@@ -10,6 +10,9 @@ INTALLERS=./installers
 GOBALS_VaF=./globals.sh
 source $GOBALS_VaF
 
+# full system update - [setup necessary mirrors for a more rubust Installation]
+sudo pacman -Syu --noconfirm
+
 for script in $(find $INTALLERS/ -name "*.sh" | sort); do
   # echo "$script"
   run_script $script

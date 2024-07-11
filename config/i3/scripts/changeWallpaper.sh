@@ -1,13 +1,13 @@
 #!/bin/bash
-# Authur: c0d_0x 
-# pywal random wallpaper script for i3-wm 
+# Authur: c0d_0x
+# pywal random wallpaper script for i3-wm
 ##
 
 # Specify the directory containing your wallpapers
 WALLPAPER_DIR="$HOME/Pictures/wallpapers"
 
 # Check if feh is installed
-if ! command -v feh &> /dev/null; then
+if ! command -v feh &>/dev/null; then
   echo "feh is not installed. Please install it using your package manager."
   exit 1
 fi
@@ -25,4 +25,4 @@ wallpaper_files=($(find "$WALLPAPER_DIR" -type f -name "*.jpg" -o -name "*.png")
 random_wallpaper="${wallpaper_files[$RANDOM % ${#wallpaper_files[@]}]}"
 
 # Set the wallpaper using pywal
-wal -i "$random_wallpaper" | tee > /dev/null && pywalfox update
+wal -i "$random_wallpaper" | tee >/dev/null && pywalfox update

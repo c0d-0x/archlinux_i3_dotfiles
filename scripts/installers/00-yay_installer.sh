@@ -18,8 +18,9 @@ fi
   git clone https://aur.archlinux.org/yay-bin.git
   cd yay-bin
   makepkg -si
-  echo "${OK}: Installation Done!!"
   cd ..
+  yay -Syy 
+  echo "${OK}: Installation Done!!"
 }
 
 

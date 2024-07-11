@@ -9,9 +9,10 @@ source ./globals.sh
 pipewirepkgs=(
     pipewire
     wireplumber
-    pipewire-audio
     pipewire-alsa
+    pipewire-jack
     pipewire-pulse
+    pipewire-audio
 )
 if command -v yay &>/dev/null; then
 

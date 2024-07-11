@@ -225,7 +225,7 @@ client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
 client.placeholder      $bg     $bg     $fg  $bg       $bg
-client.background       $bg
+client.background       $bg     $bg  
 
 # TouchPad tapping 
 # exec xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
