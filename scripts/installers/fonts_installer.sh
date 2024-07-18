@@ -7,15 +7,15 @@
 
 source ./globals.sh
 fonts=(
- adobe-source-code-pro-fonts 
- noto-fonts-emoji
  ttf-droid 
  ttf-fira-code
- ttf-jetbrains-mono 
+ noto-fonts-emoji
  ttf-font-awesome-4
+ ttf-jetbrains-mono 
  ttf-jetbrains-mono-nerd 
  ttf-cascadia-mono-nerd
  otf-comicshanns-nerd
+ adobe-source-code-pro-fonts 
 )
 
 if command -v yay &>/dev/null; then

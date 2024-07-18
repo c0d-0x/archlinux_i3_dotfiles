@@ -19,7 +19,6 @@ i3wm=(
   inxi
   jq
   kitty
-  kvantum
   network-manager-applet
   pamixer
   pavucontrol
