@@ -23,17 +23,17 @@ if command -v yay &>/dev/null; then
 
   printf "${NOTE} Installing necessary fonts \n"
 
-  for pkg in ${thunerpkgs[@]}; do
+  for font in ${fonts[@]}; do
 
-    if command -v $pkg &>/dev/null; then
-      printf "${NOTE}: $pkg has already been Installed..\n"
+    if command -v $font &>/dev/null; then
+      printf "${NOTE}: $font has already been Installed..\n"
       continue
     fi
 
 
-    yay -S $pkg --noconfirm
+    yay -S $font --noconfirm
     if [[ $? -ne 0  ]]; then
-      printf "${ERROR}: ${pkg} Was Not Installed\n"
+      printf "${ERROR}: ${font} Was Not Installed\n"
     fi
   done
 
@@ -42,8 +42,3 @@ else
   printf "${ERROR}: yay-bin is not Installed - [install it manually]\n"
 fi
 
-##
-# TODO
-# Handle locale fonts in .fonts
-# in a separate script
-#
