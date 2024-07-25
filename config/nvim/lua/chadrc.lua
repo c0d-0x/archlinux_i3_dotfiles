@@ -1,12 +1,21 @@
+-- This file needs to have same structure as nvconfig.lua 
+-- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
+
 ---@type ChadrcConfig
 local M = {}
-
+--
 M.ui = {
-  theme = "tokyonight",
+-- 	theme = "yoru",
+--
+-- 	-- hl_override = {
+-- 	-- 	Comment = { italic = true },
+-- 	-- 	["@comment"] = { italic = true },
+-- 	-- },
+theme = "yoru",
   hl_add = {},
   hl_override = {},
   -- changed_themes = {},
-  theme_toggle = { "tokyonight", "gatekeeper" },
+  theme_toggle = { "tokyonight", "yoru" },
   transparency = true,
   lsp_semantic_tokens = true,
   nvdash = {
@@ -28,8 +37,7 @@ M.ui = {
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   },
+
 }
-M.plugins = "custom.plugins"
-M.mappings = require "custom.mappings"
 
 return M
