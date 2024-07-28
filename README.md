@@ -5,7 +5,7 @@ This is a collection of my I3-wm dotfiles with installation scripts.
 <img class="fit-picture" src="./resources/Rice_img.png" alt="RICE IMG" />
 
 # Installation
-These scaripts are to be runned on a minimal archinstall.
+These scaripts are to be runned on a fresh minimal arch-install.
 ```bash
 git clone https://github.com/c0d-ox/archlinux_i3_dotfiles.git
 cd archlinux_i3_dotfiles/scripts
