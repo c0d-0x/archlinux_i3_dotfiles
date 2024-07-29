@@ -1,5 +1,5 @@
 # Author: c0d_0x
-# Description: yay-bin installer script
+# Description: Global variable and functions
 #
 set -e
 # colours

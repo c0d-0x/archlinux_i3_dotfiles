@@ -9,7 +9,6 @@ source ./globals.sh
 sddmpkgs=(
   qt6-5compat 
   qt5-base
-  qt6-base
   qt6-declarative 
   qt6-svg
   sddm
