@@ -1,4 +1,3 @@
--- EXAMPLE
 local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
@@ -6,32 +5,17 @@ local configs = require "lspconfig"
 local lspconfig = require "lspconfig"
 local prettier = require "prettier"
 
--- local lspconfig = require "lspconfig"
--- local servers = { "html", "cssls" }
---
--- -- lsps with default config
--- for _, lsp in ipairs(servers) do
---   lspconfig[lsp].setup {
---     on_attach = on_attach,
---     on_init = on_init,
---     capabilities = capabilities,
---   }
--- end
---
--- -- typescript
--- lspconfig.tsserver.setup {
---   on_attach = on_attach,
---   on_init = on_init,
---   capabilities = capabilities,
--- }
-
 lspconfig.rust_analyzer.setup {
   on_attach = on_attach,
+  on_init = on_init,
   command = { "rust-analyzer" },
   filetypes = { "rust" },
 }
 
 lspconfig.bashls.setup {
+  on_init = on_init,
+  on_attach = on_attach,
+  capabilities = capabilities,
   command = { "bash-language-server", "start" },
   provideFormatter = true,
   filetypes = { "sh" },
@@ -45,12 +29,14 @@ lspconfig.bashls.setup {
 lspconfig.asm_lsp.setup {
   command = "asm-lsp",
   on_attach = on_attach,
+  on_init = on_init,
   capabilities = capabilities,
   filetypes = { "asm", "s", "S", "ASM" },
 }
 
 lspconfig.cssls.setup {
   on_attach = on_attach,
+  on_init = on_init,
   capabilities = capabilities,
   filetype = { "css", "scss", "less" },
   provideFormatter = true,
@@ -58,15 +44,14 @@ lspconfig.cssls.setup {
 
 lspconfig.pyright.setup {
   on_attach = on_attach,
+  on_init = on_init,
   capabilities = capabilities,
   filetype = { "python" },
 }
 
 lspconfig.clangd.setup {
-  on_attach = function(client, bufnr)
-    client.server_capabilities.signatureHelpProvider = false
-    on_attach(client, bufnr)
-  end,
+  on_attach = on_attach,
+  on_init = on_init,
   capabilities = capabilities,
   filetype = { "c", "cpp" },
   provideFormatter = true,
@@ -74,6 +59,7 @@ lspconfig.clangd.setup {
 
 lspconfig.tsserver.setup {
   on_attach = on_attach,
+  on_init = on_init,
   capabilities = capabilities,
   filetype = {
     "javascript",
@@ -95,6 +81,7 @@ lspconfig.html.setup {
     capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.textDocument.completion.completionItem.snippetSupport = true
   end,
+  on_init = on_init,
   capabilities = capabilities,
   filetype = { "html", "css", "javascript" },
   embeddedLanguages = {

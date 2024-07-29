@@ -3,16 +3,16 @@ local M = {}
 --
 M.ui = {
 
---
--- 	-- hl_override = {
--- 	-- 	Comment = { italic = true },
--- 	-- 	["@comment"] = { italic = true },
--- 	-- },
-theme = "yoru",
   hl_add = {},
-  hl_override = {},
-  -- changed_themes = {},
-  theme_toggle = { "tokyonight", "yoru" },
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+  },
+
+  theme = "yoru",
+  -- hl_override = {},
+  -- changed_themes = { },
+  theme_toggle = { "yoru", "tokyonight" },
   transparency = true,
   lsp_semantic_tokens = true,
   nvdash = {
@@ -34,7 +34,6 @@ theme = "yoru",
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
   },
-
 }
 
 return M
