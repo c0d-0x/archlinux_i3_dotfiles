@@ -10,7 +10,7 @@ M.ui = {
   },
 
   theme = "yoru",
-  -- hl_override = {},
+  hl_override = {},
   -- changed_themes = { },
   theme_toggle = { "yoru", "tokyonight" },
   transparency = true,
