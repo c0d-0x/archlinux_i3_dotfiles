@@ -9,10 +9,10 @@ M.ui = {
     ["@comment"] = { italic = true },
   },
 
-  theme = "chadracula-evondev",
+  theme = "falcon",
   hl_override = {},
   -- changed_themes = { },
-  theme_toggle = { "chadracula-evondev", "tokyonight" },
+  theme_toggle = { "falcon", "tokyonight" },
   transparency = true,
   lsp_semantic_tokens = true,
   nvdash = {

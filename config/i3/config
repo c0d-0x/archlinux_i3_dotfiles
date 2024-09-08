@@ -254,9 +254,8 @@ for_window [title="Network Display"] floating enable
 for_window [instance="protonvpn-app"] floating enable
 for_window [instance="blueman-manager"] floating enable
 for_window [instance="todo"] border pixel 0 floating enable
-for_window [instance="amberol"] border pixel 0 floating enable
 for_window [instance="easyeffects"] border pixel 0 floating enable
-for_window [instance="com.vixalien.sticky"] border pixel 0 floating enable
 for_window [instance="org.gnome.clocks"] border pixel 0 floating enable
+for_window [instance="com.vixalien.sticky"] border pixel 0 floating enable
 for_window [instance="gnome-system-monitor"] border pixel 0 floating enable
 
