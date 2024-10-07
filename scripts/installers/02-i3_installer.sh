@@ -33,6 +33,7 @@ i3wm=(
   dunst
   xdg-user-dirs
   xdg-utils
+  xorg-xrdb
 )
 
 goodies=(
@@ -40,7 +41,6 @@ goodies=(
   batsignal
   btop
   cava
-  eog
   firefox
   chromium
   neofetch

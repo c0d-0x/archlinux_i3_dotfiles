@@ -3,16 +3,16 @@ local M = {}
 --
 M.ui = {
 
-  hl_add = {},
+  -- hl_add = {},
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
   },
 
-  theme = "falcon",
-  hl_override = {},
+  theme = "chadracula-evondev",
+  -- hl_override = {},
   -- changed_themes = { },
-  theme_toggle = { "falcon", "tokyonight" },
+  theme_toggle = { "chadracula-evondev", "tokyonight" },
   transparency = true,
   lsp_semantic_tokens = true,
   nvdash = {
