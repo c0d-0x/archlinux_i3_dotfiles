@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+DIR="${DIR:-$BLOCK_INSTANCE}"
+DIR="${DIR:-$HOME}"
+
+LOCAL_FLAG="-l"
+if [ "$1" = "-n" ] || [ "$2" = "-n" ]; then
+    LOCAL_FLAG=""
+fi
+
+s=$(df -h -P $LOCAL_FLAG "$DIR" | grep /dev/ | awk '{printf("%s free\n", $4)}' )
+echo $s
