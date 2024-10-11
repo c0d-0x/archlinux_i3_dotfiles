@@ -15,7 +15,7 @@ sudo pacman -Syu --noconfirm
 
 for script in $(find $INTALLERS/ -name "*.sh" | sort); do
   # echo "$script"
-  run_script $script
+  run_script $scriptscripts 
   # echo $INTALLERS/$script
 
   if [[ $? -ne 0 ]]; then
@@ -28,7 +28,8 @@ printf "${NOTE}: Installing dotfiles...\n"
 if [ ! -d ~/.config ]; then
   mkdir -p ~./config
 fi
-cp -rv ../config/* ~/.config/
+cp -rv ../dotiles/* ~/.config/
+cp -rv ../wallpapers ~/Pictures/
 
 printf "${ACTION}: Activating configs...\n"
 chown $(whoami) -R ~/.config/
