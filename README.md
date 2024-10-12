@@ -5,7 +5,7 @@
 <!--<img class="fit-picture" src="./resources/Rice_img.png" alt="RICE IMG" />-->
 <!---->
 <!--# Installation-->
-<!--These scaripts are to be runned on a fresh minimal arch-install.-->
+<!--These scaripts are to be ran on a fresh minimal arch-install.-->
 <!--```bash-->
 <!--git clone https://github.com/c0d-ox/archlinux_i3_dotfiles.git-->
 <!--cd archlinux_i3_dotfiles/scripts-->
@@ -37,6 +37,14 @@ To get started with these dotfiles, follow the instructions below:
 git clone https://github.com/c0d-0x/archlinux_i3_dotfiles.git
 cd archlinux_i3_dotfiles
 ```
+#### Install the Dotfiles on a fresh minimal arch-install
+```bash
+cp scripts
+./setup.sh #This setup should only be ran within the scripts dir 
+```
+
+
+#### Copy Dotfiles on a existing setup
 ### Backup Your Existing Dotfiles
 It's a good practice to back up your existing dotfiles before overwriting them:
 
@@ -44,10 +52,9 @@ It's a good practice to back up your existing dotfiles before overwriting them:
 mkdir ~/dotfiles_backup
 mv ~/.config/i3 ~/.config/polybar ~/.config/rofi ~/dotfiles_backup/
 ```
-#### Install the Dotfiles
+
 ```bash
-Copy code
-cp -r .config/* ~/.config/
+cp -r dotfiles/* ~/.config/
 ```
 ##### Reload i3
 After installation, reload i3 using:
@@ -68,20 +75,18 @@ $mod+Shift+R
 ### Dependencies
 Make sure to install the following packages on your Arch Linux system:
 
-+ i3: sudo pacman -S i3-wm
-+ Polybar: sudo pacman -S polybar
-+ Rofi: sudo pacman -S rofi
-+ Picom: sudo pacman -S picom
-+ Feh: sudo pacman -S feh (for setting wallpapers)
-+ Dunst: sudo pacman -S dunst (for notifications)
-+ kitty: sudo pacman -S kitty (terminal emulator)
++ i3: `sudo pacman -S i3-wm`
++ Polybar: `sudo pacman -S polybar`
++ Rofi: `sudo pacman -S rofi`
++ Picom: `yay -S picom-simpleanims-next-git` (compositor with clean animations)
++ Feh: `sudo pacman -S feh` (for setting wallpapers)
++ Dunst: `sudo pacman -S dunst` (for notifications)
++ kitty: `sudo pacman -S kitty` (terminal emulator)
 You can install these dependencies with:
 
-```bash
-sudo pacman -S i3-wm polybar rofi picom feh dunst kitty
-```
 ### Screenshots
 Here are a few screenshots of my Arch Linux i3 setup:
+<img class="fit-picture" src="./resources/Rice_img.png" alt="RICE IMG" />
 
 Desktop with Polybar and Rofi:
 

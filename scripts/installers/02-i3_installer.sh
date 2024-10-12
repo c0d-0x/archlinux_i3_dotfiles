@@ -10,7 +10,7 @@ i3wm=(
   systemd
   rofi
   polybar
-  picom
+  picom-simpleanims-next-git
   aylurs-gtk-shell
   curl
   gvfs
