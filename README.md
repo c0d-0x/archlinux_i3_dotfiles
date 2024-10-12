@@ -40,12 +40,15 @@ cd archlinux_i3_dotfiles
 #### Install the Dotfiles on a fresh minimal arch-install
 ```bash
 cp scripts
-./setup.sh #This setup should only be ran within the scripts dir 
+./setup.sh #This setup should only be ran within the scripts dir
+# This scripts run multiple scripts to setup your minamal install by
+#installing i3 and  all of it's dependencies. 
 ```
 
 
 #### Copy Dotfiles on a existing setup
-### Backup Your Existing Dotfiles
+
+##### Backup Your Existing Dotfiles
 It's a good practice to back up your existing dotfiles before overwriting them:
 
 ```bash
@@ -71,6 +74,7 @@ $mod+Shift+R
 + Picom: A lightweight compositor for transparency and window effects.
 + Custom Keybindings: Optimized shortcuts for efficient workflows.
 + Theming: A minimalist aesthetic with custom colors, fonts, and icons.
++ Color: colors are base on wallpaper store in ~/pictures/wallpapers. These colors are generate using pywal.
 
 ### Dependencies
 Make sure to install the following packages on your Arch Linux system:
