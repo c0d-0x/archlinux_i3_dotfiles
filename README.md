@@ -103,7 +103,7 @@ Feel free to modify the following files to suit your preferences:
 + Polybar: ~/.config/polybar/config
 + Rofi: ~/.config/rofi/config.rasi
 + Picom: ~/.config/picom/picom.conf
-+ Alacritty: ~/.config/alacritty/alacritty.yml
++ kitty: ~/.config/kitty/kitty.conf
 You can also change the color schemes, keybindings, and add custom scripts to make it your own.
 
 ### Contributing
