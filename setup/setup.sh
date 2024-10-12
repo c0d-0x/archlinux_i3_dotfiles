@@ -15,7 +15,7 @@ sudo pacman -Syu --noconfirm
 
 for script in $(find $INTALLERS/ -name "*.sh" | sort); do
   # echo "$script"
-  run_script $scriptscripts 
+  run_script $script 
   # echo $INTALLERS/$script
 
   if [[ $? -ne 0 ]]; then
