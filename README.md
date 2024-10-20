@@ -90,11 +90,15 @@ You can install these dependencies with:
 
 ### Screenshots
 Here are a few screenshots of my Arch Linux i3 setup:
-<img class="fit-picture" src="./resources/Rice_img.png" alt="RICE IMG" />
+<img class="fit-picture" src="./resources/setup-3.00.png" alt="RICE IMG" />
 
-Desktop with Polybar and Rofi:
+Desktop with Polybar and Thunar:
+<img class="fit-picture" src="./resources/setup-3.00d.png" alt="RICE IMG" />
 
-Window Tiling in i3:
+
+Firefox pywal-fox theme:
+<img class="fit-picture" src="./resources/setup-3.00b.png" alt="RICE IMG" />
+
 
 ### Customization
 Feel free to modify the following files to suit your preferences:
