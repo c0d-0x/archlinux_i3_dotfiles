@@ -192,7 +192,7 @@ bindsym $mod+r mode "resize"
 exec --no-startup-id dunst
 exec --no-startup-id picom
 exec --no-startup-id blueman-applet 
-exec --no-startup-id greenclip daemon &
+exec_always --no-startup-id greenclip daemon &
 exec --no-startup-id $HOME/.config/i3/scripts/changeWallpaper.sh
 exec_always --no-startup-id $HOME/.config/i3/scripts/polybarLaunch.sh
 exec_always --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
@@ -219,7 +219,7 @@ set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #C68BEE 
 
 # class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg       $bg
+client.focused          $fg     $fg     $bg  $bg       $bg
 client.focused_inactive $bg     $bg     $fg  $bg       $bg
 client.unfocused        $bg     $bg     $fg  $bg       $bg
 client.urgent           $bg     $bg     $fg  $bg       $bg
@@ -253,9 +253,9 @@ for_window [instance="qbittorrent"] floating enable
 for_window [title="Network Display"] floating enable
 for_window [instance="protonvpn-app"] floating enable
 for_window [instance="blueman-manager"] floating enable
+for_window [instance="gnome-system-monitor"] floating enable
 for_window [instance="amberol"] border pixel 0 floating enable
 for_window [instance="easyeffects"] border pixel 0 floating enable
 for_window [instance="org.gnome.clocks"] border pixel 0 floating enable
 for_window [instance="com.vixalien.sticky"] border pixel 0 floating enable
-for_window [instance="gnome-system-monitor"] border pixel 0 floating enable
 

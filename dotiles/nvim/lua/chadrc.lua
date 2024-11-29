@@ -12,10 +12,10 @@ M.base46 = {
 		Comment = { italic = true },
 		["@comment"] = { italic = true },
 	},
-  theme = "tokyonight",
+  theme = "falcon",
   hl_override = {},
   -- changed_themes = { },
-  theme_toggle = { "falcon", "tokyonight" },
+  theme_toggle = { "falcon", "chadracula-evondev" },
   transparency = true,
   lsp_semantic_tokens = true,
 }
