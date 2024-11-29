@@ -196,7 +196,7 @@ exec_always --no-startup-id greenclip daemon &
 exec --no-startup-id $HOME/.config/i3/scripts/changeWallpaper.sh
 exec_always --no-startup-id $HOME/.config/i3/scripts/polybarLaunch.sh
 exec_always --no-startup-id /usr/lib/polkit-kde-authentication-agent-1
-exec_always --no-startup-id xautolock -detectsleep -time 3 -locker $HOME/.config/i3lock/lock 
+exec_always --no-startup-id xautolock -detectsleep -time 3 -locker $HOME/.config/i3lock/lock.sh 
 exec --no-startup-id batsignal -b -f 98 -w 10 -c 8 -d 3 -W "Battry low" -C "Plug Your Charger" -F "Battry Fully Charged"  
 
 # Keybinds
