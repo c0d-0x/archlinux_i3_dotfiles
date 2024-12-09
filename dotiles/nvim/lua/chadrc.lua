@@ -10,7 +10,7 @@ M.base46 = {
 
 	hl_override = {
 		Comment = { italic = true },
-		["@comment"] = { italic = true },
+		["@Comment"] = { italic = true },
 	},
   theme = "falcon",
   hl_override = {},
@@ -18,8 +18,9 @@ M.base46 = {
   theme_toggle = { "falcon", "chadracula-evondev" },
   transparency = true,
   lsp_semantic_tokens = true,
+  
 }
-
+M.lsp = {signature = true}
 M.nvdash = {
     load_on_startup = true,
     header = {

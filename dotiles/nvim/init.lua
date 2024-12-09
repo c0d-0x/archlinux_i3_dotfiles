@@ -1,3 +1,4 @@
+
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
 
@@ -35,3 +36,23 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- Function to check if a file exists
+local function file_exists(file)
+  local f = io.open(file, 'r')
+  if f then
+    f:close()
+    return true
+  else
+    return false
+  end
+end
+
+-- Path to the session file
+local session_file = '.session.vim'
+
+-- Check if the session file exists in the current directory
+if file_exists(session_file) then
+  -- Source the session file
+  vim.cmd('source ' .. session_file)
+end

@@ -207,7 +207,7 @@ bindsym $mod+Shift+F exec firefox
 bindsym $mod+Shift+X scratchpad show
 bindsym $mod+Shift+Tab workspace prev
 bindsym $mod+p exec polybar-msg cmd quit
-bindsym $mod+Ctrl+L exec $HOME/.config/i3lock/lock
+bindsym $mod+Ctrl+L exec $HOME/.config/i3lock/lock.sh
 bindsym Print exec maim -s -u | xclip -selection clipboard -t image/png -i
 bindsym $mod+w exec --no-startup-id $HOME/.config/i3/scripts/changeWallpaper.sh
 bindsym $mod+Ctrl+P exec --no-startup-id $HOME/.config/rofi/powermenu/powermenu.sh
@@ -254,6 +254,7 @@ for_window [title="Network Display"] floating enable
 for_window [instance="protonvpn-app"] floating enable
 for_window [instance="blueman-manager"] floating enable
 for_window [instance="gnome-system-monitor"] floating enable
+for_window [instance="PacketTracer"] floating enable
 for_window [instance="amberol"] border pixel 0 floating enable
 for_window [instance="easyeffects"] border pixel 0 floating enable
 for_window [instance="org.gnome.clocks"] border pixel 0 floating enable
