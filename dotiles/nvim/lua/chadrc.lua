@@ -12,7 +12,7 @@ M.base46 = {
 		Comment = { italic = true },
 		["@Comment"] = { italic = true },
 	},
-  theme = "falcon",
+  theme = "chadracula-evondev",
   hl_override = {},
   -- changed_themes = { },
   theme_toggle = { "falcon", "chadracula-evondev" },
