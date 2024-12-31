@@ -8,6 +8,7 @@
 source ./globals.sh
 fonts=(
  ttf-droid 
+ ttf-ms-fonts
  ttf-fira-code
  noto-fonts-emoji
  ttf-font-awesome-4
