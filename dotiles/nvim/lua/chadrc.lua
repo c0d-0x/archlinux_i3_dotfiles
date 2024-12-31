@@ -12,7 +12,7 @@ M.base46 = {
 		Comment = { italic = true },
 		["@Comment"] = { italic = true },
 	},
-  theme = "chadracula-evondev",
+  theme = "falcon",
   hl_override = {},
   -- changed_themes = { },
   theme_toggle = { "falcon", "chadracula-evondev" },
@@ -30,6 +30,7 @@ M.nvdash = {
       "██║     ████╔╝██║██║  ██║        ██║   ██║ ██╔██╗ ",
       "╚██████╗╚██████╔╝██████╔╝███████╗╚██████╔╝██╔╝ ██╗",
       " ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝",
+      "                                                  ",
     },
       
 }
