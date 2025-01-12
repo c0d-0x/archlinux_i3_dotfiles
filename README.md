@@ -103,11 +103,11 @@ yay -S xdg-user-dirs xdg-utils xorg-xrdb
 Here are a few screenshots of my Arch Linux i3 setup:
 <img class="fit-picture" src="./resources/setup-3.00.png" alt="RICE IMG" />
 
-Desktop with Polybar and Thunar:
+Desktop with Polybar and Thunar: GTK theme: [Abyss-DEEP](https://github.com/rtlewis1/GTK/tree/Abyss-Desktop) and icons: [BeautySolar](https://www.gnome-look.org/p/2037657)
 <img class="fit-picture" src="./resources/setup-3.00d.png" alt="RICE IMG" />
 
 
-Firefox pywal-fox theme:
+Firefox pywal-fox theme: You'll need to install the `pywalfox` plugin for firefox. [here](https://addons.mozilla.org/en-US/firefox/addon/pywalfox/)
 <img class="fit-picture" src="./resources/setup-3.00b.png" alt="RICE IMG" />
 
 
