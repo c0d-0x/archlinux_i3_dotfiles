@@ -86,7 +86,7 @@ Make sure to install the following packages on your Arch Linux system:
 + Feh: `sudo pacman -S feh` (for setting wallpapers)
 + Dunst: `sudo pacman -S dunst` (for notifications)
 + kitty: `sudo pacman -S kitty` (terminal emulator)
-+ yay:
++ yay: Install yay with the Commands below
 ```bash 
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
