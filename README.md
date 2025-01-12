@@ -91,10 +91,9 @@ Make sure to install the following packages on your Arch Linux system:
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si``` 
+makepkg -si
 
-+ Install brightnessct, python-pywal and python-pywalfox for Firefox pywal themes brightness controls
-```bash
+# Install brightnessct, python-pywal and python-pywalfox for Firefox pywal themes brightness controls
 yay -S brightnessctl python-pywal python-pywalfox
 # IMPORTANT for i3 polybar colours
 yay -S xdg-user-dirs xdg-utils xorg-xrdb
