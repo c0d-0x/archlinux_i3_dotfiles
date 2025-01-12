@@ -82,11 +82,22 @@ Make sure to install the following packages on your Arch Linux system:
 + i3: `sudo pacman -S i3-wm`
 + Polybar: `sudo pacman -S polybar`
 + Rofi: `sudo pacman -S rofi`
-+ Picom: `yay -S picom-simpleanims-next-git` (compositor with clean animations)
++ Picom: `yay -S picom-git` 
 + Feh: `sudo pacman -S feh` (for setting wallpapers)
 + Dunst: `sudo pacman -S dunst` (for notifications)
 + kitty: `sudo pacman -S kitty` (terminal emulator)
-You can install these dependencies with:
++ yay: ```bash 
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si``` 
+
++ Install brightnessct, python-pywal and python-pywalfox for Firefox pywal themes brightness controls
+```bash
+yay -S brightnessctl python-pywal python-pywalfox
+# IMPORTANT for i3 polybar colours
+yay -S xdg-user-dirs xdg-utils xorg-xrdb
+```
 
 ### Screenshots
 Here are a few screenshots of my Arch Linux i3 setup:

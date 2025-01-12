@@ -29,7 +29,8 @@ if [ ! -d ~/.config ]; then
   mkdir -p ~./config
 fi
 cp -rv ../dotiles/* ~/.config/
-cp -rv ../wallpapers ~/Pictures/
+mkdir ~/Pictures/wallpapers
+cp -rv ../wallpapers/* ~/Pictures/wallpapers
 
 printf "${ACTION}: Activating configs...\n"
 chown $(whoami) -R ~/.config/
