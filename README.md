@@ -70,6 +70,7 @@ $mod+Shift+R
 Make sure to install the following packages on your Arch Linux system:
 
 + i3: `sudo pacman -S i3-wm`
++ thunar: `sudo pacman -S thunar thunar-archive-plugin` (a file manager)
 + Polybar: `sudo pacman -S polybar`
 + Rofi: `sudo pacman -S rofi`
 + Picom: `yay -S picom-git` 
@@ -84,9 +85,9 @@ cd yay
 makepkg -si
 
 # Install brightnessct, python-pywal and python-pywalfox for Firefox pywal themes brightness controls
-yay -S brightnessctl python-pywal python-pywalfox
-# IMPORTANT for i3 polybar colours
-yay -S xdg-user-dirs xdg-utils xorg-xrdb
+yay -S brightnessctl python-pywal python-pywalfox xdg-user-dirs xdg-utils xorg-xrdb
+# IMPORTANT for i3 polybar colours: xorg-xrdb
+
 ```
 
 ### Screenshots
