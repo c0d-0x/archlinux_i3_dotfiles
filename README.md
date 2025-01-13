@@ -39,7 +39,7 @@ cd archlinux_i3_dotfiles
 ```
 #### Install the Dotfiles on a fresh minimal arch-install
 ```bash
-cp scripts
+cp setup
 ./setup.sh #This setup should only be ran within the scripts dir
 # This scripts run multiple scripts to setup your minamal install by
 #installing i3 and  all of it's dependencies. 
@@ -57,7 +57,7 @@ mv ~/.config/i3 ~/.config/polybar ~/.config/rofi ~/dotfiles_backup/
 ```
 
 ```bash
-cp -r dotfiles/* ~/.config/
+cp -r dotfiles/i3 dotfiles/polybar dotfiles/rofi dotfiles/i3lock ~/.config/
 ```
 ##### Reload i3
 After installation, reload i3 using:
