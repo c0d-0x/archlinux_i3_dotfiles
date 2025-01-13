@@ -110,7 +110,70 @@ Feel free to modify the following files to suit your preferences:
 + Rofi: ~/.config/rofi/config.rasi
 + Picom: ~/.config/picom/picom.conf
 + kitty: ~/.config/kitty/kitty.conf
-You can also change the color schemes, keybindings, and add custom scripts to make it your own.
+You can also change the color schemes, keybindings, and add custom scripts.
+
+# Keybindings
+
+Below is a list of keybindings used in this i3 configuration. The **SUPER** key is the **Windows** key.
+
+| Key Combination          | Action                                      |
+|--------------------------|---------------------------------------------|
+| **SUPER+Return**         | Launch `kitty` terminal.                   |
+| **SUPER+q**              | Kill the focused window.                   |
+| **SUPER+d**              | Launch `rofi` application launcher.        |
+| **SUPER+k/h/j/l**        | Change focus (up/left/down/right).         |
+| **SUPER+Up/Down/Left/Right** | Change focus using arrow keys.           |
+| **SUPER+Shift+k/h/j/l**  | Move focused window (up/left/down/right).  |
+| **SUPER+Shift+Up/Down/Left/Right** | Move focused window using arrow keys. |
+| **SUPER+b**              | Split in horizontal orientation.           |
+| **SUPER+v**              | Split in vertical orientation.             |
+| **SUPER+f**              | Toggle fullscreen mode.                    |
+| **SUPER+s**              | Change layout to stacking.                 |
+| **SUPER+e**              | Toggle split layout.                       |
+| **SUPER+Shift+W**        | Change layout to tabbed.                   |
+| **SUPER+Shift+space**    | Toggle floating mode.                      |
+| **SUPER+space**          | Toggle focus between tiling/floating.      |
+| **SUPER+a**              | Focus the parent container.                |
+| **SUPER+1...0**          | Switch to workspace 1–10.                  |
+| **SUPER+Shift+1...0**    | Move container to workspace 1–10.          |
+| **SUPER+Shift+c**        | Reload i3 configuration.                   |
+| **SUPER+Shift+r**        | Restart i3.                                |
+| **SUPER+Shift+e**        | Exit i3 (with confirmation prompt).        |
+
+## Resize Mode Keybindings
+| Key Combination          | Action                                      |
+|--------------------------|---------------------------------------------|
+| **SUPER+r**              | Enter resize mode.                         |
+| **h/j/k/l**              | Resize (shrink/grow width/height).         |
+| **Left/Down/Up/Right**   | Resize using arrow keys.                   |
+| **Return/Escape/SUPER+r**| Exit resize mode.                          |
+
+## Multimedia and System Keybindings
+| Key Combination          | Action                                      |
+|--------------------------|---------------------------------------------|
+| **XF86AudioMute**        | Mute audio.                                |
+| **XF86AudioLowerVolume** | Decrease audio volume by 5%.               |
+| **XF86AudioRaiseVolume** | Increase audio volume by 5%.               |
+| **XF86AudioMicMute**     | Toggle microphone mute.                    |
+| **XF86MonBrightnessUp**  | Increase screen brightness by 5%.          |
+| **XF86MonBrightnessDown**| Decrease screen brightness by 5%.          |
+| **Print**                | Take a screenshot of a selected area.      |
+
+## Custom Keybindings
+| Key Combination          | Action                                      |
+|--------------------------|---------------------------------------------|
+| **SUPER+t**              | Launch `thunar` file manager.              |
+| **SUPER+x**              | Move window to the scratchpad.             |
+| **SUPER+Shift+X**        | Show scratchpad window.                    |
+| **SUPER+Tab**            | Switch to the next workspace.              |
+| **SUPER+Shift+Tab**      | Switch to the previous workspace.          |
+| **SUPER+Shift+F**        | Launch `firefox`.                          |
+| **SUPER+p**              | Quit `polybar`.                            |
+| **SUPER+Ctrl+L**         | Lock the screen.                           |
+| **SUPER+w**              | Change wallpaper.                          |
+| **SUPER+Ctrl+P**         | Launch power menu.                         |
+| **SUPER+c**              | Open clipboard manager (`rofi`).           |
+
 
 ### Contributing
 If you have any suggestions or improvements, feel free to open an issue or submit a pull request. Contributions are always welcome!
