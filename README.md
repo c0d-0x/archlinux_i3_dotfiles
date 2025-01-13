@@ -86,7 +86,7 @@ makepkg -si
 
 # Install brightnessct, python-pywal and python-pywalfox for Firefox pywal themes brightness controls
 yay -S brightnessctl python-pywal python-pywalfox xdg-user-dirs xdg-utils xorg-xrdb
-# IMPORTANT for i3 polybar colours: xorg-xrdb
+# IMPORTANT for i3 polywal colours: xorg-xrdb
 
 ```
 
