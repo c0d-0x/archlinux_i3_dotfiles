@@ -110,7 +110,7 @@ Feel free to modify the following files to suit your preferences:
 + Rofi: ~/.config/rofi/config.rasi
 + Picom: ~/.config/picom/picom.conf
 + kitty: ~/.config/kitty/kitty.conf
-You can also change the color schemes, keybindings, and add custom scripts.
+<br>You can also change the color schemes, keybindings, and add custom scripts.
 
 # Keybindings
 
