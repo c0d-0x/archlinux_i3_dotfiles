@@ -1,7 +1,8 @@
-return{
-  bin = 'prettier', -- or `'prettierd'` (v0.23.3+)
+return {
+  bin = "prettier", -- or `'prettierd'` (v0.23.3+)
   filetypes = {
     "css",
+    "sql",
     "graphql",
     "html",
     "javascript",
@@ -37,14 +38,14 @@ return{
   },
   on_attach = function(client, bufnr)
     if client.resolved_capabilities.document_formatting then
-      vim.cmd("nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>")
+      vim.cmd "nnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.formatting()<CR>"
 
       -- format on save
-      vim.cmd("autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()")
+      vim.cmd "autocmd BufWritePost <buffer> lua vim.lsp.buf.formatting()"
     end
 
     if client.resolved_capabilities.document_range_formatting then
-      vim.cmd("xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting({})<CR>")
+      vim.cmd "xnoremap <silent><buffer> <Leader>f :lua vim.lsp.buf.range_formatting({})<CR>"
     end
   end,
 }

@@ -92,4 +92,7 @@ lspconfig.html.setup {
     javascript = true,
   },
 }
+lspconfig.sqlls.setup{
+  filetype = { "sql", "mysql" } 
+}
 prettier.setup(require "configs.prettierconfig")

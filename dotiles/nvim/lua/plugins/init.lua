@@ -67,6 +67,7 @@ return {
     opts = {
       ensure_installed = {
         "shfmt",
+        "sqlls",
         "clangd",
         "stylua",
         "checkmake",
