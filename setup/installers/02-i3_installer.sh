@@ -34,6 +34,7 @@ i3wm=(
   xdg-user-dirs
   xdg-utils
   xorg-xrdb
+  sxhkd
 )
 
 goodies=(

@@ -25,4 +25,4 @@ wallpaper_files=($(find "$WALLPAPER_DIR" -type f -name "*.jpg" -o -name "*.png")
 random_wallpaper="${wallpaper_files[$RANDOM % ${#wallpaper_files[@]}]}"
 
 # Set the wallpaper using pywal
-wal -i "$random_wallpaper" | tee >/dev/null && pywalfox update
+wal -i "$random_wallpaper" > /dev/null && pywalfox update
