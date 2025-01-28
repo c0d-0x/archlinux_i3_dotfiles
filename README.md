@@ -127,9 +127,8 @@ Below is a list of keybindings used in this i3 configuration. The **SUPER** key 
 | **SUPER+b**              | Split in horizontal orientation.           |
 | **SUPER+v**              | Split in vertical orientation.             |
 | **SUPER+f**              | Toggle fullscreen mode.                    |
-| **SUPER+s**              | Change layout to stacking.                 |
 | **SUPER+e**              | Toggle split layout.                       |
-| **SUPER+Shift+W**        | Change layout to tabbed.                   |
+| **SUPER+s**              | Change layout to tabbed.                   |
 | **SUPER+Shift+space**    | Toggle floating mode.                      |
 | **SUPER+space**          | Toggle focus between tiling/floating.      |
 | **SUPER+a**              | Focus the parent container.                |
