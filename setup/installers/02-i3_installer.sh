@@ -35,6 +35,7 @@ i3wm=(
   xdg-utils
   xorg-xrdb
   sxhkd
+  rofimoji
 )
 
 goodies=(
