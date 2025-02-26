@@ -15,7 +15,7 @@ M.base46 = {
   theme = "falcon",
   hl_override = {},
   -- changed_themes = { },
-  theme_toggle = { "falcon", "chadracula-evondev" },
+  theme_toggle = { "falcon", "eldritch" },
   transparency = true,
   lsp_semantic_tokens = true,
 }

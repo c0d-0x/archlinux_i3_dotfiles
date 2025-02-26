@@ -12,6 +12,14 @@ lspconfig.rust_analyzer.setup {
   filetypes = { "rust" },
 }
 
+lspconfig.gopls.setup {
+  settings = {
+    gopls = {
+      gofumpt = true,
+    },
+  },
+}
+
 lspconfig.bashls.setup {
   on_init = on_init,
   on_attach = on_attach,
@@ -92,7 +100,7 @@ lspconfig.html.setup {
     javascript = true,
   },
 }
-lspconfig.sqlls.setup{
-  filetype = { "sql", "mysql" } 
+lspconfig.sqlls.setup {
+  filetype = { "sql", "mysql" },
 }
 prettier.setup(require "configs.prettierconfig")

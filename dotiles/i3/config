@@ -1,4 +1,5 @@
 set $mod Mod4
+set $mod1 Mod1
 include $HOME/.config/i3/workspaces.conf
 
 font pango:Cascadia Nerd Font Mono bold 11
@@ -61,10 +62,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+b split v
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
