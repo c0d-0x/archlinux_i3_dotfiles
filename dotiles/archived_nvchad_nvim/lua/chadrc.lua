@@ -11,11 +11,19 @@ M.base46 = {
   hl_override = {
     Comment = { italic = true },
     ["@Comment"] = { italic = true },
+    BufferLine = {
+      bg = "none",
+    },
+    BufferLineBackground = {
+      bg = "none",
+    },
+    BufferLineSeparator = {
+      bg = "none",
+    },
   },
-  theme = "falcon",
-  hl_override = {},
+  theme = "gruvbox",
   -- changed_themes = { },
-  theme_toggle = { "falcon", "eldritch" },
+  theme_toggle = { "falcon", "gruvbox" },
   transparency = true,
   lsp_semantic_tokens = true,
 }

@@ -1,5 +1,5 @@
 return {
-  bin = "prettier", -- or `'prettierd'` (v0.23.3+)
+  bin = "prettier", -- or 'prettierd' (v0.23.3+)
   filetypes = {
     "css",
     "sql",
@@ -23,9 +23,9 @@ return {
     embedded_language_formatting = "auto",
     end_of_line = "lf",
     html_whitespace_sensitivity = "css",
-    -- jsx_bracket_same_line = false,
+    jsx_bracket_same_line = false,
     jsx_single_quote = true,
-    print_width = 80,
+    print_width = 120,
     prose_wrap = "preserve",
     quote_props = "as-needed",
     semi = true,

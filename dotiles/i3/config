@@ -176,6 +176,7 @@ workspace_auto_back_and_forth yes
 for_window [all] move position center
 for_window [class="^.*"] border pixel 1
 for_window [title="Thunar"] floating enable
+for_window [title="mpv"] floating enable
 for_window [instance="zoom"] floating enable
 for_window [instance="slack"] floating enable
 for_window [title="Telegram"] floating enable
@@ -187,12 +188,14 @@ for_window [instance="whatsdesk"] floating enable
 for_window [instance="galculator"] floating enable
 for_window [instance="qbittorrent"] floating enable
 for_window [title="Network Display"] floating enable
+for_window [instance="PacketTracer"] floating enable
 for_window [instance="protonvpn-app"] floating enable
 for_window [instance="blueman-manager"] floating enable
 for_window [instance="gnome-system-monitor"] floating enable
-for_window [instance="PacketTracer"] floating enable
+for_window [instance="VirtualBox"] floating enable
 for_window [instance="amberol"] border pixel 0 floating enable
 for_window [instance="easyeffects"] border pixel 0 floating enable
 for_window [instance="org.gnome.clocks"] border pixel 0 floating enable
 for_window [instance="com.vixalien.sticky"] border pixel 0 floating enable
+for_window [instance="org.gnome.FileRoller"] border pixel 0 floating enable
 
