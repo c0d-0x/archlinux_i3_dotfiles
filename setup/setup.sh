@@ -13,7 +13,7 @@ source $GOBALS_VaF
 # full system update - [setup necessary mirrors for a more rubust Installation]
 sudo pacman -Syu --noconfirm
 
-for script in $(find $INTALLERS/ -name "*.sh" | sort); do
+for script n $(find $INTALLERS/ -name "*.sh" | sort); do
   # echo "$script"
   run_script $script 
   # echo $INTALLERS/$script
