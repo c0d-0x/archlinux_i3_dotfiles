@@ -1,6 +1,11 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
   {
+    --Cursor animations
+    "sphamba/smear-cursor.nvim",
+    opts = { legacy_computing_symbols_support = true },
+  },
+  {
     -- Tmux & split window navigation
     "christoomey/vim-tmux-navigator",
   },
@@ -21,8 +26,8 @@ return {
     "folke/which-key.nvim",
   },
   {
-    -- Autoclose parentheses, brackets, quotes, etc.
-    "windwp/nvim-autopairs",
+    j      -- Autoclose parentheses, brackets, quotes, etc.
+ "windwp/nvim-autopairs",
     event = "InsertEnter",
     config = true,
     opts = {},

@@ -37,8 +37,8 @@ vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", opts)
 -- Disable arrow keys in insert mode to encourage hjkl usage
 vim.keymap.set("i", "<Up>", "<Nop>", opts)
 vim.keymap.set("i", "<Down>", "<Nop>", opts)
--- vim.keymap.set("i", "<Left>", "<Nop>", opts)
--- vim.keymap.set("i", "<Right>", "<Nop>", opts)
+vim.keymap.set("i", "<Left>", "<Nop>", opts)
+vim.keymap.set("i", "<Right>", "<Nop>", opts)
 
 -- Buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", opts)
