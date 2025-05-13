@@ -18,7 +18,10 @@ return {
         "shfmt", -- Shell formatter
         "checkmake", -- linter for Makefiles
         "ruff", -- Python linter and formatter
+        "dockerls",
         "shfmt",
+        "sqls",
+        "sqlfmt",
         "gopls",
         "gofumpt",
         "goimports",
@@ -38,6 +41,7 @@ return {
         "prismals",
         "lua_lsp",
         "asmfmt",
+        "jdtls",
       },
       automatic_installation = true,
     }
@@ -47,12 +51,12 @@ return {
       formatting.prettier.with { filetypes = { "html", "json", "yaml", "markdown" } },
       formatting.stylua,
       formatting.shfmt.with { args = { "-i", "4" } },
-      -- formatting.terraform_fmt,
       formatting.goimports,
       formatting.gofumpt,
       formatting.clang_format,
       formatting.prettier,
       formatting.asmfmt,
+      formatting.sqlfmt,
       diagnostics.checkmake,
       diagnostics.codespell,
       require("none-ls.formatting.ruff").with { extra_args = { "--extend-select", "I" } },

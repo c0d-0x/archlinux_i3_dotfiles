@@ -32,6 +32,7 @@ return {
   {
     "catppuccin/nvim",
     name = "catppuccin",
+    lazy = false,
     priority = 1000,
     config = function()
       require("catppuccin").setup {
@@ -40,21 +41,9 @@ return {
     end,
   },
   {
-    "fenetikm/falcon",
-    priority = 1000,
-    config = function()
-      require "falcon"
-      vim.g.falcon_airline = true
-      vim.g.airline_theme = "falcon"
-      vim.g.falcon_background = true
-      vim.g.falcon_inactive = true
-    end,
-    -- lazy = false,
-  },
-  {
     "tiagovla/tokyodark.nvim",
-    priority = 1000,
     lazy = false,
+    priority = 1000,
     opts = {
       -- custom options here
     },
@@ -65,6 +54,7 @@ return {
   },
   {
     "rebelot/kanagawa.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
       require("kanagawa").setup {
@@ -110,6 +100,5 @@ return {
       -- vim.cmd("colorscheme kanagawa")
       vim.api.nvim_set_hl(0, "BufferLineFill", { bg = "none" })
     end,
-    lazy = false,
   },
 }

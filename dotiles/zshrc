@@ -1,0 +1,26 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.zsh_history
+HISTSIZE=1000
+SAVEHIST=10000
+zstyle :compinstall filename '/home/c0d_0x/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# starship config
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
+eval "$(starship init zsh)"
+
+# aliases
+alias 'ls'='ls --color'
+alias 'grep'='grep --colour'
+alias 'vi'='nvim'
+
+# autocompletion
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# man-pages syntax highlighting with less
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+
+

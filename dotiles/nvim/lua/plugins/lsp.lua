@@ -170,7 +170,7 @@ return {
         },
       },
       -- tailwindcss = {},
-      -- dockerls = {},
+      dockerls = {},
       -- sqlls = {},
       -- terraformls = {},
       prettier = {
@@ -226,16 +226,13 @@ return {
       -- },
 
       cssls = {
-        -- on_attach = on_attach,
-        -- on_init = on_init,
-        -- capabilities = capabilities,
         filetype = { "css", "scss", "less" },
         provideFormatter = true,
       },
 
-      pyright = {
-        filetype = { "python" },
-      },
+      -- pyright = {
+      --   filetype = { "python" },
+      -- },
 
       clangd = {
         filetype = { "c", "cpp" },
@@ -271,12 +268,10 @@ return {
       sqlls = {
         filetype = { "sql", "mysql" },
       },
+      jdtls = {},
       prismals = {},
 
       lua_ls = {
-        -- cmd = {...},
-        -- filetypes = { ...},
-        -- capabilities = {},
         settings = {
           Lua = {
             completion = {

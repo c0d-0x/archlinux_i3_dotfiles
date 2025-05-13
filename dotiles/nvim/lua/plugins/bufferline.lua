@@ -48,18 +48,18 @@ return {
         enforce_regular_tabs = false,
         always_show_bufferline = false,
         sort_by = "id",
-        highlights = {
-          fill = {
-            bg = "none",
-          },
-          background = {
-            bg = "none",
-          },
-          tab = {
-            fg = "none",
-            bg = "none",
-          },
-        },
+        -- highlights = {
+        --   fill = {
+        --     bg = "none",
+        --   },
+        --   background = {
+        --     bg = "none",
+        --   },
+        --   tab = {
+        --     fg = "none",
+        --     bg = "none",
+        --   },
+        -- },
       },
 
       vim.keymap.set("n", "<space>bp", "<cmd>BufferLinePick<CR>", {

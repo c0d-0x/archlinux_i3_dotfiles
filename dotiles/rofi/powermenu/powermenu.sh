@@ -5,9 +5,9 @@ dir="$HOME/.config/rofi/powermenu/"
 theme='style'
 
 # CMDs
-lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
-uptime="`uptime -p | sed -e 's/up //g'`"
-host=`hostname`
+lastlogin="$(last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7)"
+uptime="$(uptime -p | sed -e 's/up //g')"
+host=$(hostname)
 
 # Options
 hibernate=''
@@ -55,9 +55,9 @@ run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			 poweroff
+			poweroff
 		elif [[ $1 == '--reboot' ]]; then
-			 reboot
+			reboot
 		elif [[ $1 == '--hibernate' ]]; then
 			systemctl hibernate
 		elif [[ $1 == '--suspend' ]]; then
@@ -83,26 +83,26 @@ run_cmd() {
 # Actions
 chosen="$(run_rofi)"
 case ${chosen} in
-    $shutdown)
-		run_cmd --shutdown
-        ;;
-    $reboot)
-		run_cmd --reboot
-        ;;
-    $hibernate)
-		run_cmd --hibernate
-        ;;
-    $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			bash $HOME/.config/i3lock/lock.sh
-		fi
-        ;;
-    $suspend)
-		run_cmd --suspend
-        ;;
-    $logout)
-		run_cmd --logout
-        ;;
+$shutdown)
+	run_cmd --shutdown
+	;;
+$reboot)
+	run_cmd --reboot
+	;;
+$hibernate)
+	run_cmd --hibernate
+	;;
+$lock)
+	if [[ -x '/usr/bin/betterlockscreen' ]]; then
+		betterlockscreen -l
+	elif [[ -x '/usr/bin/i3lock' ]]; then
+		bash $HOME/.config/i3lock/lock.sh
+	fi
+	;;
+$suspend)
+	run_cmd --suspend
+	;;
+$logout)
+	run_cmd --logout
+	;;
 esac
