@@ -13,7 +13,7 @@ source $GOBALS_VaF
 # full system update - [setup necessary mirrors for a more rubust Installation]
 sudo pacman -Syu --noconfirm
 
-for script n $(find $INTALLERS/ -name "*.sh" | sort); do
+for script in $(find $INTALLERS/ -name "*.sh" | sort); do
   # echo "$script"
   run_script $script 
   # echo $INTALLERS/$script
@@ -29,7 +29,7 @@ if [ ! -d ~/.config ]; then
   mkdir -p ~./config
 fi
 cp -rv ../dotiles/* ~/.config/
-mkdir ~/Pictures/wallpapers
+mkdir -p ~/Pictures/wallpapers
 cp -rv ../wallpapers/* ~/Pictures/wallpapers
 
 printf "${ACTION}: Activating configs...\n"
