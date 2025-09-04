@@ -14,19 +14,19 @@ source $GOBALS_VaF
 sudo pacman -Syu --noconfirm
 
 for script in $(find $INTALLERS/ -name "*.sh" | sort); do
-  # echo "$script"
-  run_script $script 
-  # echo $INTALLERS/$script
+    # echo "$script"
+    run_script $script
+    # echo $INTALLERS/$script
 
-  if [[ $? -ne 0 ]]; then
-    echo $ERROR: "${script}: Failed!!"
-  fi
+    if [[ $? -ne 0 ]]; then
+        echo $ERROR: "${script}: Failed!!"
+    fi
 done
 
 printf "${NOTE}: Installing dotfiles...\n"
 
 if [ ! -d ~/.config ]; then
-  mkdir -p ~./config
+    mkdir -p ~./config
 fi
 cp -rv ../dotiles/* ~/.config/
 mkdir -p ~/Pictures/wallpapers
@@ -39,8 +39,8 @@ printf "${NOTE}: Done Installing dotfiles...\n"
 
 printf "${NOTE}: Setting up tab to click [Xorg mouse config]...\n"
 if [ ! -d "/etc/X11/xorg.conf.d" ]; then
-  sudo mkdir -p /etc/X11/xorg.conf.d/
-  printf "\n${WARNING}: Directory '/etc/X11/xorg.conf.d/' created...\n"
+    sudo mkdir -p /etc/X11/xorg.conf.d/
+    printf "\n${WARNING}: Directory '/etc/X11/xorg.conf.d/' created...\n"
 fi
 
 sudo cp ../touchpad-tap.conf /etc/X11/xorg.conf.d/touchpad-tap.conf
