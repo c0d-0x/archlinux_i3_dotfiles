@@ -16,8 +16,7 @@
 # c0d-0x's Arch Linux i3 Dotfiles
 Welcome to my Arch Linux i3 configuration repository! This repo contains all the dotfiles I use to configure my lightweight and efficient Arch Linux environment with the i3 window manager.
 
-Installation
-To get started with these dotfiles, follow the instructions below:
+## Installation
 
 ```bash
 # Clone the Repository
